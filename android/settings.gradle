@@ -1,0 +1,3 @@
+rootProject.name = 'SpeakerRecognitionApp'
+
+include ':app'
