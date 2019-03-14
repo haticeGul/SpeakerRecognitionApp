@@ -9,6 +9,8 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button,TouchableOpacity} from 'react-native';
+import RegForm from './components/RegForm';
+import HomePage from './components/HomePage';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -17,50 +19,23 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
         
-        <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}> Log in </Text>
-        </TouchableOpacity >
-        <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}> Register </Text>
-        </TouchableOpacity >
+       <RegForm/>
         
       </View>
-    );
+    ); 
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    alignSelf: 'stretch',
-    paddingLeft: 20,
-    paddingRight: 20,
-    backgroundColor: '#F5FCFF', 
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    marginBottom: 10,
-    color:'red'
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  button: {
-    alignSelf:'stretch',
-    marginTop:20,
-    backgroundColor:'rgba(0, 0, 0, 0.8)',
-    padding:20
-},
-buttonText: {
-  color:'#fff',
-  fontsize:18
-}
+   flex: 1,
+   justifyContent: 'center',
+   backgroundColor:'rgba(0, 0, 0, 0.8)'
+  }
 });
